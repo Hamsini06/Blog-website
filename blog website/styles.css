@@ -3,7 +3,7 @@ body{
   width: auto;
 }
 nav{
-  background-color: #ced9ff
+  background-color: #ced9ff;
 }
 .nav-item{
   padding-left: 25px;
@@ -11,10 +11,16 @@ nav{
 }
 .intro{
   padding: 20px 40px;
-  background-color: #ced9ff;
-  width: 100%;
-  height: 600px;
-  padding-top: 10%;
+    background-color: #ced9ff;
+    width: 100%;
+    height: 620px;
+    padding-top: 10%;
+    margin-top: 2%;
+}
+.intro_img{
+  float: right;
+  padding-right: 5%;
+  height: 30rem;
 }
 h2{
   font-family: 'Montserrat', sans-serif;
@@ -23,54 +29,42 @@ h2{
 h1{
   font-family: 'Open Sans', sans-serif;
   font-size: 4rem;
-  position: absolute;
-  display: inline-block;
 }
 h3{
   font-family: 'Montserrat', sans-serif;
 }
-.intro_img{
-  float: right;
-  position: relative;
-  bottom:100px;
-  padding-right: 5%;
-  height: 30rem;
-}
 .start_btn{
-  display: block;
-  position: relative;
-  top: 250px;
+  margin-top: 50px;
 }
 .sec_2{
   background-color: #CBF4C8;
   width: 100%;
-  height: 600px;
+  height: 620px;
   padding-top: 10%;
+  margin: 0px;
 }
 .sec_2_img{
   float: left;
-  position: relative;
-  bottom:30px;
-  padding-right: 5%;
-  padding-left: 5%;
-  height: 25rem;
+  padding-left: 15%;
+  height: 23rem;
 }
 .sec_btn{
-  position: relative;
-  top: 100px;
+  margin-top: 50px;
 }
 .sec_3{
-  padding: 20px 40px;
   background-color: #F4DCDC;
   width: 100%;
-  height: 600px;
+  height: 620px;
+  padding-left: 30px;
   padding-top: 10%;
+  margin: 0px;
 }
 .sec_4{
   background-color: #F8E6BC;
   width: 100%;
-  height: 600px;
+  height: 620px;
   padding-top: 10%;
+  margin: 0px;
 }
 .outro{
   padding: 20px 40px;
@@ -81,14 +75,57 @@ h3{
 .out_btn{
   margin: 20px;
   display: block;
-  width: 40%;
+  width: 70%;
 }
 i{
   padding-right: 10px;
 }
 .icons{
- position: relative;
- left: 62%;
- bottom: 60%;
- padding: 20px 30px;
+ padding: 30px 30px;
+}
+@media (max-width: 1000px){
+.intro{
+  height: 400px;
+  margin-top: 10%;
+}
+.sec_2{
+  height: 400px;
+}
+.sec_3{
+  height: 400px;
+  padding-left: 0px;
+}
+.sec_4{
+  height: 400px;
+}
+.intro_img{
+  height: 25rem;
+  display: none;
+}
+.sec_2_img{
+  display: none;
+}
+.sec_3_img{
+  display: none;
+}
+.sec_4_img{
+  display: none;
+}
+}
+@media (max-width: 600px){
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 1rem;
+}
+.icons{
+  width: 30%;
+}
+.icon_row{
+  padding-top: 30px;
+}
 }

@@ -9,6 +9,7 @@ const app = express();
 const ejs = require("ejs");
 var val = [];
 var log_user = "";
+var data ;
 app.use(express.static('public'));
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -38,10 +39,19 @@ const catSchema = new mongoose.Schema({
   }
 });
 
+const blogSchema = new mongoose.Schema({
+  username: String,
+  date: Date,
+  title: String,
+  blog: String,
+  label: String
+});
+
 regSchema.plugin(passportLocalMongoose);
 
 const user = mongoose.model("users",regSchema);
 const user_choices = mongoose.model("user_choices", catSchema);
+const user_blogs = mongoose.model("user_blogs", blogSchema);
 
 passport.use(user.createStrategy());
 passport.serializeUser(user.serializeUser());
@@ -67,6 +77,9 @@ app.post('/reg',function(req,res){
       passport.authenticate("local")(req,res,function(){
       res.redirect("/blog_page");
       });
+    }
+    if(req.isAuthenticated()){
+      log_user = req.body.username;
     }
   });
 });
@@ -121,6 +134,14 @@ app.get("/ss.html",function(req,res){
   res.sendFile(__dirname +  '/ss.html');
 });
 
+app.get("/compose",function(req,res){
+  res.render("compose");
+});
+
+app.get("/read_blogs",function(req,res){
+  res.render("read_blogs");
+});
+
 app.post("/ss.html",function(req,res){
   const user_choice = new user_choices({
     username: "hams",
@@ -142,7 +163,16 @@ app.get('/mainpage',function(req,res){
       val = user.categories;
     }
   });
-  res.render("mainpage",{btn_length: val});
+  user_blogs.find({"label":val},function(err,user_data){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log(user_data);
+      data = user_data;
+    }
+  });
+  res.render("mainpage",{btn_length: val, usr_data: data});
 });
 
 app.get('/login',function(req,res){

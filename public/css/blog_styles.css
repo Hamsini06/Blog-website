@@ -1,0 +1,54 @@
+body{
+  margin: 20px 40px;
+  background-color: #8FBDD3;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 10px;
+}
+h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  text-align:   center;
+}
+.items{
+  margin:5px;
+  display: inline-block;
+}
+input{
+  display: none;
+}
+img{
+  margin: 5px 10px;
+}
+.items-collection{
+    margin:40px 0 0 100px;
+}
+.items-collection label.btn-default.active{
+    background-color:#007ba7;
+    color:#FFF;
+}
+.items-collection label.btn-default{
+  background-color: white;
+    width: 30rem;
+    border-radius: 15px;
+}
+.items-collection label .itemcontent{
+    width:100%;
+}
+.items-collection .btn-group{
+    width:90%
+}
+.nxt_btn{
+  color: white;
+  position: absolute;
+  right: 100px;
+  margin-top:40px;
+}
+h6{
+  padding-top: 5px;
+}
+img{
+  display: block;
+}

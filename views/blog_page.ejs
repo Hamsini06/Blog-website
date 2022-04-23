@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/blog_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Blog</title>
+  </head>
+  <body>
+    <h1>Select your interests!</h1>
+    <h6>Pick atleast 3</h6>
+    <form action="/blog_page" method="post">
+      <div class="container">
+      <div class="row">
+          <div class="form-group">
+              <div class="items-collection">
+                  <div class="items col-xs-3 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                              <label class="btn1 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" name = "choices[]" onclick="onChange()" id = 'check1' autocomplete="off" value="Tech">
+                                      <img src="images/tech.png" alt="">
+                                      <h6>Tech</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn2 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" id = 'check2' onclick = "onChange()" name="choices[]" autocomplete="off" value="Cooking">
+                                      <img src="images/cook.png" alt="">
+                                      <h6>Cooking</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn3 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check3' name="choices[]" autocomplete="off" value="Fitness">
+                                      <img src="images/fit.png" alt="">
+                                      <h6>Fitness</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn4 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check4' name="choices[]" autocomplete="off" value="Travel">
+                                      <img src="images/travel.png" alt="">
+                                      <h6>Travel</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn5 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check5' name="choices[]" autocomplete="off" value="Anime">
+                                      <img src="images/anime.png" alt="">
+                                      <h6>Anime</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn6 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check6' name="choices[]" autocomplete="off" value="Business">
+                                      <img src="images/business.png" alt="">
+                                      <h6>Business</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn7 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check7' name="choices[]" autocomplete="off" value="Fashion">
+                                      <img src="images/fashion.png" alt="">
+                                      <h6>Fashion</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn8 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check8' name="choices[]" autocomplete="off" value="Sports">
+                                      <img src="images/sports.png" alt="">
+                                      <h6>Sports</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn9 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check9' name="choices[]" autocomplete="off" value="Health">
+                                      <img src="images/health.png" alt="">
+                                      <h6>Health</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="items col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      <div class="info-block block-info clearfix">
+                          <div data-toggle="buttons" class="btn-group itemcontent">
+                              <label class="btn10 btn-default">
+                                  <div class="itemcontent">
+                                      <input type="checkbox" onclick="onChange()" id = 'check10' name="choices[]" autocomplete="off" value="Finance">
+                                      <img src="images/finance.png" alt="">
+                                      <h6>Finance</h6>
+                                  </div>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <button type="submit" name ="button" onclick="next()" class="nxt_btn btn-lg btn btn-primary"><a>Next</a></button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/blog_page.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

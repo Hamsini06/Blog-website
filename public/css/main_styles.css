@@ -20,24 +20,21 @@ nav{
   display: inline-block;
   margin:auto 10px;
 }
-.main_body{
-  margin: 20px 40px;
+.blog_display{
   background-color: white;
+  margin: 20px 40px;
+  padding: 20px 40px;
 }
 h3{
   font-family: 'Montserrat', sans-serif;
 }
-.data{
-  padding:10px 50px;
-  width: 100%;
+.intro{
+  padding: 20px 40px;
+    width: 100%;
+    padding-top: 10%;
+    margin-top: 2%;
 }
-.left{
-  width: 500px;
-}
-.right{
-  position: absolute;
-  right: 20px;
-}
-.main_img{
-  height: 100px;
+.btn_dis{
+  float: right;
+  height: 10rem;
 }

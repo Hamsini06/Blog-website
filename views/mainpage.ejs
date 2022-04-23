@@ -29,7 +29,7 @@
       <a class="nav-link" href="#">Help</a>
     </li>
   </ul>
-  <button type="button" class="btn btn-primary btn-md" name="button"><a href="reg" style = "color:white;">SIGN OUT</a></button>
+  <button type="button" class="btn btn-primary btn-md" name="button"><a href="login" style = "color:white;">SIGN OUT</a></button>
 
 </div>
 </nav>
@@ -39,35 +39,33 @@
   <%btn_length.forEach(function(val){%>
     <button type="button" class="btn_val btn-primary btn-md" name="button"><a href="reg.html" style = "color:white;"><%=val%></a></button>
   <%})%>
-  <button type="button" style = "position:absolute; right: 50px;"class="btn_add btn-md" name="button"><a href = "blog_page"><i class="fa fa-plus"></i></a></button>
+  <button type="button" style = "position:absolute; right: 50px;"class="btn_add btn-md" name="button"><a href = "compose">Create <i class="fa fa-pen to square"></i></a></button>
 </div>
-
-<div class="main_body">
-  <div class="data row">
-    <div class="left col-lg-2">
-      <h5>Author xxx</h5>
-      <h2>Kpop - The new generation</h2>
-       <p>LOREM IPSUM</p>
-    </div>
-    <div class="right col-lg-2">
-      <img class = "main_img" src="images/fashion.png" alt="">
-    </div>
-  </div>
-  <hr color="gray"
-        size="10">
-  <div class="data row">
-    <div class="left col-lg-2">
-      <h5>Author xxx</h5>
-      <h2>Kpop - The new generation</h2>
-       <p>LOREM IPSUM</p>
-    </div>
-    <div class="right col-lg-2">
-      <img class = "main_img" src="images/fashion.png" alt="">
-    </div>
-  </div>
+<section class = "blog_display">
+  <%usr_data.forEach(function(val){%>
+    <button id = "read_btn" type="button" name="button" onclick = "/read_blogs" style = "border:none; background-color: white; text-align:left;">
+      <div class="main_body row">
+      <div class="col-lg-6">
+        <h5 style="display:inline-block; padding-right:20px;"><%=val.username%></h5>
+        <p style="display:inline-block;"><%=val.date.toString().substring(0,9)%></p>
+        <h2><%=val.title%></h2>
+         <p><%=val.blog.substring(0,200)%></p>
+      </div>
+      <div class="col-lg-6">
+      <img src="images/tech.png" class = "btn_dis" alt="blogart">
+      </div>
+      </div>
+      <hr color="gray"size="10">
+    </button>
 
 
-</div>
+
+  <%})%>
+
+
+</section>
+
+
 
 
 </div>

@@ -3,8 +3,123 @@
   <head>
     <meta charset="utf-8">
     <title>Compose blogs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/com_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a353081e02.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Write</h1>
+    <div class="row">
+      <div class="col-lg">
+        <div class="bar">
+        <button type="button" class="sec_btn btn btn-md" ><i class="fa fa-floppy-o"></i></i>Save draft</button>
+        <button type="button" class="sec_btn btn btn-md" ><i class="fa fa-eye"></i>Preview</button>
+        <button type="button" class="sec_btn btn btn-primary btn-md" ><i class="fa fa-upload"></i>Publish</button>
+        <button type="button" style = "border-radius:100px;" class=" sec_btn btn btn-md" ><i style = "font-size:20px;" class="fa fa-user"></i></button>
+
+        </div>
+      </div>
+
+    </div>
+    <form class="sec_form" action="compose" method="post">
+      <div class="sec_body">
+        <h1 class="shadow-sm">TEXT EDITOR</h1>
+      <div class="flex-box">
+          <div class="row">
+              <div class="col">
+                  <button type="button"
+                          onclick="f1()"
+                          class=" shadow-sm btn btn-outline-secondary"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Bold Text">
+          Bold</button>
+                  <button type="button"
+                          onclick="f2()"
+                          class="shadow-sm btn btn-outline-success"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Italic Text">
+          Italic</button>
+                  <button type="button"
+                          onclick="f3()"
+                          class=" shadow-sm btn btn-outline-primary"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Left Align">
+          <i class="fas fa-align-left"></i></button>
+                  <button type="button"
+                          onclick="f4()"
+                          class="btn shadow-sm btn-outline-secondary"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Center Align">
+          <i class="fas fa-align-center"></i></button>
+                  <button type="button"
+                          onclick="f5()"
+                          class="btn shadow-sm btn-outline-primary"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Right Align">
+          <i class="fas fa-align-right"></i></button>
+                  <button type="button"
+                          onclick="f6()"
+                          class="btn shadow-sm btn-outline-secondary"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Uppercase Text">
+          Upper Case</button>
+                  <button type="button"
+                          onclick="f7()"
+                          class="btn shadow-sm btn-outline-primary"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Lowercase Text">
+          Lower Case</button>
+                  <button type="button"
+                          onclick="f8()"
+                          class="btn shadow-sm btn-outline-primary"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Capitalize Text">
+          Capitalize</button>
+                  <button type="button"
+                          onclick="f9()"
+                          class="btn shadow-sm btn-outline-primary side"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Tooltip on top">
+          Clear Text</button>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-3 col-sm-3">
+          </div>
+          <div class="col-md-6 col-sm-9">
+              <div class="flex-box">
+                  <textarea id="textarea1"
+                            class="input shadow"
+                            name="name"
+                            rows="15"
+                            cols="100"
+                            placeholder="Your text here ">
+                  </textarea>
+              </div>
+          </div>
+          <div class="col-md-3">
+          </div>
+      </div>
+  </section>
+  <br>
+  <br>
+      </div>
+    </form>
+
+<script src="js/com_edit.js" charset="utf-8"></script>
+
   </body>
 </html>

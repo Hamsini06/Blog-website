@@ -135,9 +135,29 @@ app.get("/ss.html",function(req,res){
 });
 
 app.get("/compose",function(req,res){
-  res.render("compose");
+  user_choices.findOne({"username": log_user},function(err,user){
+    if(err){
+      console.log(err);
+    }
+    else{
+      val = user.categories;
+    }
+  });
+  res.render("compose",{labels: val,username:log_user});
 });
 
+
+app.post('/compose',function(req,res){
+   const user_write = new user_blogs({
+     username: log_user,
+     date: Date(),
+     title: req.body.title,
+     blog: req.body.blogtext,
+     label: req.body.blog_labels
+   });
+   user_write.save();
+   res.redirect("/compose");
+});
 app.get("/read_blogs",function(req,res){
   res.render("read_blogs");
 });

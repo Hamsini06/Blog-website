@@ -16,8 +16,8 @@
         <div class="bar">
         <button type="button" class="sec_btn btn btn-md" ><i class="fa fa-floppy-o"></i></i>Save draft</button>
         <button type="button" class="sec_btn btn btn-md" ><i class="fa fa-eye"></i>Preview</button>
-        <button type="button" class="sec_btn btn btn-primary btn-md" ><i class="fa fa-upload"></i>Publish</button>
-        <button type="button" style = "border-radius:100px;" class=" sec_btn btn btn-md" ><i style = "font-size:20px;" class="fa fa-user"></i></button>
+        <button type="button" class="sec_btn btn btn-light btn-md"><i class="fa fa-upload"></i>Publish</button>
+        <button type="button" style = "border-radius:100px;" id = "user_btn" class="sec_btn btn btn-md" ><i style = "font-size:20px;padding-right:10px;" class="fa fa-user"><%=username%></span></i></button>
 
         </div>
       </div>
@@ -25,7 +25,22 @@
     </div>
     <form class="sec_form" action="compose" method="post">
       <div class="sec_body">
-        <h1 class="shadow-sm">TEXT EDITOR</h1>
+        <h1 class="shadow-sm">Start writing!</h1>
+      <div class="title_sec">
+        <label style = "font-size: 1.3rem; padding-left:30px;"for="">Title: </label>
+        <input type="text" class = "title_input" name="title" value="">
+      </div>
+      <div class="label_sec">
+        <div class="dropdown">
+
+ <select name="blog_labels">
+    <%labels.forEach(function(val){%>
+    <option value="<%=val%>"><%=val%></option>
+    <%})%>
+  </select>
+</div>
+
+      </div>
       <div class="flex-box">
           <div class="row">
               <div class="col">
@@ -97,26 +112,23 @@
       </div>
       <br>
       <div class="row">
-          <div class="col-md-3 col-sm-3">
-          </div>
-          <div class="col-md-6 col-sm-9">
+          <div class="col-lg col-md-6 col-sm-9">
               <div class="flex-box">
                   <textarea id="textarea1"
                             class="input shadow"
-                            name="name"
-                            rows="15"
-                            cols="100"
+                            name="blogtext"
+                            rows="30"
+                            cols="120"
                             placeholder="Your text here ">
                   </textarea>
               </div>
-          </div>
-          <div class="col-md-3">
           </div>
       </div>
   </section>
   <br>
   <br>
       </div>
+        <button type="submit" class="sec_btn btn btn-light btn-md" style ="width:10%; margin-left:30%;"></i>Save</button>
     </form>
 
 <script src="js/com_edit.js" charset="utf-8"></script>

@@ -1,0 +1,38 @@
+body{
+  background-color: #ced9ff;
+}
+
+.bar{
+  background-color: #EFEFEF;
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.sec_btn{
+  position: relative;
+  left: 50%;
+  margin: 20px 20px;
+}
+
+.sec_btn:hover{
+  border: 2px solid black;
+}
+i{
+  padding: 5px;
+}
+i::before{
+  padding-right: 5px;
+}
+.sec_body{
+  background-color: #EFEFEF;
+  margin: auto 80px;
+  height: 1100px;
+}
+h2 {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }

@@ -4,6 +4,18 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <script type="text/javascript">
+    function readValues(){
+        var username = document.querySelector("h5").value;
+        var date = document.getElementsByClassName('date').value;
+        var title = document.getElementById('title').value;
+        var content = document.getElementById('content').value;
+        localStorage.setItem("username",username);
+        localStorage.setItem("date",date);
+        localStorage.setItem("title",title);
+        localStorage.setItem("content",content);
+    }
+  </script>
   <body>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main_styles.css">
@@ -34,6 +46,7 @@
 </div>
 </nav>
 
+
 <div class="main_sec">
   <h3 style = "display: inline-block;">Your topics:</h3>
   <%btn_length.forEach(function(val){%>
@@ -43,13 +56,13 @@
 </div>
 <section class = "blog_display">
   <%usr_data.forEach(function(val){%>
-    <button id = "read_btn" type="button" name="button" onclick = "/read_blogs" style = "border:none; background-color: white; text-align:left;">
+    <button type="button" class = "read_btn" name="button" onclick="readValues()" style = "border:none; background-color: white; text-align:left;">
       <div class="main_body row">
       <div class="col-lg-6">
-        <h5 style="display:inline-block; padding-right:20px;"><%=val.username%></h5>
-        <p style="display:inline-block;"><%=val.date.toString().substring(0,9)%></p>
-        <h2><%=val.title%></h2>
-         <p><%=val.blog.substring(0,200)%></p>
+        <h5 class = 'username' style="display:inline-block; padding-right:20px;"><%=val.username%></h5>
+        <p class = 'date'style="display:inline-block;"><%=val.date.toString().substring(0,9)%></p>
+        <h2 class = 'title'><%=val.title%></h2>
+        <p class = 'content'><%=val.blog.substring(0,200)%></p>
       </div>
       <div class="col-lg-6">
       <img src="images/tech.png" class = "btn_dis" alt="blogart">
